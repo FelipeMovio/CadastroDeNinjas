@@ -1,18 +1,21 @@
-package com.felipemovio.CadastroNinja.entitys;
+package com.felipemovio.CadastroNinja.NInjas.entitys;
 
 
+import com.felipemovio.CadastroNinja.Missoes.entity.Missao;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "cadstro-de-ninjas")
+@Table(name = "cadastro-de-ninjas")
 public class Ninja {
 
     @Id
@@ -22,4 +25,7 @@ public class Ninja {
     private String nome;
     private String email;
     private Integer idade;
+
+    @OneToMany(mappedBy = "cadastro-de-ninjas")
+    private List<Missao> missao;
 }
