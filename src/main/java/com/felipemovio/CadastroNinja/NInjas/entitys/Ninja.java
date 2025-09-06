@@ -26,6 +26,8 @@ public class Ninja {
     private String email;
     private Integer idade;
 
-    @OneToMany(mappedBy = "cadastro-de-ninjas")
-    private List<Missao> missao;
+    // @ManyToOne varias ninjas em uma unica missao
+    @ManyToOne
+    @JoinColumn(name = "missao_id") // chave estrangeira
+    private  Missao missao;
 }

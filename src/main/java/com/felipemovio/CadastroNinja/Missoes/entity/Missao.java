@@ -12,16 +12,17 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Missoes")
+@Table(name = "Missao")
 public class Missao {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nomeMissao;
     private Dificuldade dificuldade;
 
-    @JoinColumn(name = "Ninja_id")
-    @OneToMany
+
+    // @OneToManny uma missao pode ter varios ninjas
+    @OneToMany(mappedBy = "missao")
     private Ninja ninja;
 }
