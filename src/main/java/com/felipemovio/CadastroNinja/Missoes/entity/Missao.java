@@ -1,11 +1,13 @@
 package com.felipemovio.CadastroNinja.Missoes.entity;
 
-import com.felipemovio.CadastroNinja.NInjas.entitys.Ninja;
+import com.felipemovio.CadastroNinja.Ninjas.entitys.Ninja;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
 
 @Setter
 @Getter
@@ -24,5 +26,5 @@ public class Missao {
 
     // @OneToManny uma missao pode ter varios ninjas
     @OneToMany(mappedBy = "missao")
-    private Ninja ninja;
+    private List<Ninja> ninja;
 }

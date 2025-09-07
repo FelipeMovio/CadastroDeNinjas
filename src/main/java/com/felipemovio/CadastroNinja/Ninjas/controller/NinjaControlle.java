@@ -1,4 +1,4 @@
-package com.felipemovio.CadastroNinja.NInjas.controller;
+package com.felipemovio.CadastroNinja.Ninjas.controller;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;

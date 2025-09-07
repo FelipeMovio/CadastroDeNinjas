@@ -1,7 +1,7 @@
-package com.felipemovio.CadastroNinja.NInjas.services;
+package com.felipemovio.CadastroNinja.Ninjas.services;
 
-import com.felipemovio.CadastroNinja.NInjas.entitys.Ninja;
-import com.felipemovio.CadastroNinja.NInjas.repository.NinjaRepository;
+import com.felipemovio.CadastroNinja.Ninjas.entitys.Ninja;
+import com.felipemovio.CadastroNinja.Ninjas.repository.NinjaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
