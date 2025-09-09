@@ -21,7 +21,7 @@ public class NinjaControlle {
     // Criar Ninja
     @PostMapping
     public void criarNinja(@RequestBody Ninja ninja){
-        ninjaService.cadstraNinja(ninja);
+        ninjaService.cadastraNinja(ninja);
     }
 
 //    ver todos ninjas criados
