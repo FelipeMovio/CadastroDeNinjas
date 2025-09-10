@@ -34,9 +34,13 @@ public class PopularTabela {
                 }
 
 
-                Missao missao1 = new Missao(null, "investigarAkatsuki", Dificuldade.dificil, null);
+                List<Missao> missoes = new ArrayList<>();
+                missoes.add(new Missao(null, "investigarAkatsuki", Dificuldade.dificil, null));
+                missoes.add(new Missao(null,"emBuscaDeSasuke",Dificuldade.media,null));
 
-                missaoRepository.saveAll(List.of(missao1));
+                for (Missao missoe : missoes){
+                    missaoRepository.saveAll(List.of(missoe));
+                }
 
                 System.out.println(" populados com sucesso!");
             }
